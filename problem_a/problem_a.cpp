@@ -218,6 +218,17 @@ int main()
         }
 
         int flow = FFalg(&source); // num of max pairs(max goods 2x1)
+        
+        for(Product* el: dark)
+        {
+            delete el;
+        }
+
+        for(Product* el: white)
+        {
+            delete el;
+        }
+
 
         std::cout << "to replace you need " << A * flow + B * (num - 2 * flow) << " c.u.";
     }
